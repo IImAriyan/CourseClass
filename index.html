@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<main class="flex justify-center items-center">
+<main class="flex justify-center items-center gap-10">
     <section class="container">
         <div class="title">
             <h1>Course Adding</h1>
@@ -61,8 +61,8 @@
                     </div>
                 </div>
                 <div class="addStudentsPanel flex flex-col" id="StudentsAddPanel">
-                    <div class="title">
-                        <h1>Add Students</h1>
+                    <div class="errorMessage flex justify-center" id="error-message">
+                        <h5 id="errorMessageText"></h5>
                     </div>
                     <div class="flex gap-2 justify-between">
                         <div class="values">
@@ -82,7 +82,13 @@
                 <div class="title">
                     <h1>Students</h1>
                 </div>
-
+                <table class="students-table" id="students-table">
+                    <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    </thead>
+                </table>
             </div>
         </div>
     </section>

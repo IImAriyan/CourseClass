@@ -68,7 +68,6 @@ function removeErrorMessage() {
 
 //============== End Of Other Functions ===============================\\
 
-errorMessage('hello World')
 // Arrays
 var Courses = []
 var Stundets = []
@@ -79,32 +78,50 @@ function addingCourse() {
     const timeCourse = document.querySelector('#timeOfCourse').value;
 
 
+    // =============== Error Messages ==================\\
+    if (titleCourse !== '') {
+        if (dateCourse !== '') {
+            if (timeCourse !== '') {
 
-    const  course = new Course();
+                removeErrorMessage() // Hide Error Message
 
-    course.id = Courses.length;
-    course.title = titleCourse;
-    course.date = dateCourse;
-    course.time = timeCourse;
+                const  course = new Course();
 
-    pageOfCourse = Courses.length
-    //======= getting panel Course And Show And Set Data =============================================
+                course.id = Courses.length;
+                course.title = titleCourse;
+                course.date = dateCourse;
+                course.time = timeCourse;
 
-    const coursePanel = document.querySelector('#coursePanel');
-    coursePanel.style.display = 'flex';
+                pageOfCourse = Courses.length
+                //======= getting panel Course And Show And Set Data =============================================
 
-    const titleLabel = document.querySelector('#titleLabel');
-    const dateLabel = document.querySelector('#dateLabel');
-    const timeLabel = document.querySelector('#timeLabel');
+                const coursePanel = document.querySelector('#coursePanel');
+                coursePanel.style.display = 'flex';
 
-    titleLabel.textContent = course.title;
-    timeLabel.textContent = course.time;
-    dateLabel.textContent = course.date;
+                const titleLabel = document.querySelector('#titleLabel');
+                const dateLabel = document.querySelector('#dateLabel');
+                const timeLabel = document.querySelector('#timeLabel');
 
-    //==================================================================================
+                titleLabel.textContent = course.title;
+                timeLabel.textContent = course.time;
+                dateLabel.textContent = course.date;
 
-    Courses.push(course)
+                //==================================================================================
+
+                Courses.push(course)
+            }else {
+                errorMessage('Please Enter Time');
+            }
+        }else {
+            errorMessage('Please Enter Date');
+        }
+    }else {
+        errorMessage('Please Enter Title');
+    }
+    // =============== Error Messages ==================\\
+
 };
+
 
 //======= Adding Students =============================================
 
@@ -134,25 +151,17 @@ function addStudent(){
     // ***************** Add Student Element In HTML Document **************************\\
     Stundets.forEach(student => {
 
-        const studentElement = document.createElement('div');
+        const studentElement = document.createElement('tbody');
         studentElement.classList.add('student');
-        studentElement.classList.add('flex');
-        studentElement.classList.add('gap-4');
         studentElement.id = 'student-'+parseInt(student.id);
         content = `
-        <div class="firstname" id="firstnameOfStudent">
-            <h4>${student.firstname}</h4>
-        </div>
-        <div class="lastname" id="lastnameOfStudent">
-             <h4>${student.lastname}</h4>
-        </div>
-        <div class="age" id="ageOfStudent">
-        <h4>${student.age}</h4>
-        </div>
+             <td>${student.firstname}</td>
+             <td>${student.lastname}</td>
+             <td>${student.age}</td>
         `
         studentElement.innerHTML = content;
 
-        const students = document.querySelector('.students');
+        const students = document.querySelector('#students-table');
 
         students.appendChild(studentElement);
     })

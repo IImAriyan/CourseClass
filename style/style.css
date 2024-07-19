@@ -205,3 +205,45 @@ section#coursePanel {
   text-align: center;
   border: solid 0.2rem rgb(255,90,90);
 }
+
+.students-table {
+  color: white;
+}
+
+thead {
+  background: white;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+th {
+  padding: 1rem;
+}
+
+th:first-child{
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+th:last-child{
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+
+
+td {
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+}
+td:first-child{
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+td:last-child{
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
