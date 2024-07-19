@@ -31,17 +31,54 @@ class Student {
 }
 //============== Student Class ==============================\\
 
+
+//============== Other Functions ===============================\\
 function removeElement(id) {
     var elem = document.getElementById(id);
     return elem.parentNode.removeChild(elem);
 }
 
+function errorMessage(message){
+
+    //============== Show ErrorMessage Element ===============================\\
+
+    const errorMessageElement = document.querySelector('#error-message');
+    errorMessageElement.style.display = 'inherit';
+
+    //=========================================================================\\
+
+    //============== Set Text Error ===============================\\
+
+    const errorMessageText = document.querySelector('#errorMessageText');
+    errorMessageText.textContent = message;
+    navigator.vibrate(2000); // Mobile Vibrate
+
+    //==============================================================\\
+}
+
+function removeErrorMessage() {
+
+    //============== Hide ErrorMessage Element ===============================\\
+
+    const errorMessageElement = document.querySelector('#error-message');
+    errorMessageElement.style.display = 'none';
+
+    //=========================================================================\\
+}
+
+//============== End Of Other Functions ===============================\\
+
+errorMessage('hello World')
+// Arrays
 var Courses = []
 var Stundets = []
+
 function addingCourse() {
     const titleCourse = document.querySelector('#titleOfCourse').value;
     const dateCourse = document.querySelector('#dateOfCourse').value;
     const timeCourse = document.querySelector('#timeOfCourse').value;
+
+
 
     const  course = new Course();
 

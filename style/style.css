@@ -195,3 +195,13 @@ section#coursePanel {
   background: red;
   transform: translateX(-10%) translateY(10%);
 }
+
+
+.errorMessage {
+  display: none;
+  width: 100%;
+  border-radius: 1rem;
+  background: red;
+  text-align: center;
+  border: solid 0.2rem rgb(255,90,90);
+}
