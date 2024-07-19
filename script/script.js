@@ -92,7 +92,7 @@ function addingCourse() {
                 course.date = dateCourse;
                 course.time = timeCourse;
 
-                pageOfCourse = Courses.length
+
                 //======= getting panel Course And Show And Set Data =============================================
 
                 const coursePanel = document.querySelector('#coursePanel');
@@ -109,6 +109,7 @@ function addingCourse() {
                 //==================================================================================
 
                 Courses.push(course)
+                pageOfCourse = Courses.length
             }else {
                 errorMessage('Please Enter Time');
             }
