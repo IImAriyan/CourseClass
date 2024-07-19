@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Tailwind Css Classes */
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-flow: column wrap;
+}
+
+.gap-2 {
+  gap: 0.3rem;
+}
+
+.gap-4 {
+  gap:0.5rem;
+}
+
+.gap-10 {
+  gap: 2rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+/* ===== End Of Flexbox  ==================================*/
+body {
+  padding: 0;
+  margin:0;
+}
+* {
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+main {
+  padding: 1rem;
+}
+
+.container {
+  width: 24rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: dimgray;
+  color: white;
+}
+
+
+.title {
+  text-align: center;
+  color: white;
+}
+
+.inputs {
+  padding: 2rem;
+}
+
+.inputs input {
+  text-indent: 5%;
+  outline: none;
+  padding: 1rem;
+  width: 15rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  border:none;
+}
+
+.add-course {
+  cursor: pointer;
+  border:none;
+  border-radius: 1rem;
+
+  width: 20rem;
+  padding: 1rem;
+  text-align: center;
+  background: mediumseagreen;
+  transition: all;
+  transition-duration: 200ms;
+  color: white;
+}
+
+.add-course:hover {
+  background: lightseagreen;
+  transform: translateY(-5%);
+}
+
+
+.showDetails {
+  width: 50rem;
+  height: 20rem;
+  background: slategray;
+  border-radius: 1rem;
+}
+.box-lb {
+  background: black;
+  color: white;
+  width: 25.333333%;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+}
+section#coursePanel {
+  position: absolute;
+  z-index:10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: lightgray;
+  display: none;
+}
+
+.addStudentsPanel {
+  background: slategray;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.addStudentsPanel input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+
+.addingButton {
+  border-radius: 50%;
+  border:none;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  cursor: pointer;
+  background: springgreen;
+  color: white;
+  transition: all 200ms ease-in-out;
+  transition-duration: 200ms;
+}
+
+.addingButton:hover {
+  background:lightseagreen;
+}
+
+.students {
+  height: auto;
+  width: auto;
+  background: slategray;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.student {
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: darkslategray;
+  background: ghostwhite;
+  border-radius: 1rem;
+}
+
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  width: auto;
+  padding: 1rem;
+  height: auto;
+  border:solid 0.1rem red;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.closeBtn:hover {
+  background: red;
+  transform: translateX(-10%) translateY(10%);
+}
